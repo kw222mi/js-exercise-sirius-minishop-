@@ -44,3 +44,23 @@ home.classList.add('active');
 
 const logo = document.querySelector(".logo");
 logo.classList.remove("logo"); 
+
+const nav = document.querySelector('nav')
+let menuItem = document.createElement('a')
+menuItem.innerText='Pic me!'
+menuItem.setAttribute('href', "#");
+nav.appendChild(menuItem)
+
+
+const main = document.querySelector('main')
+const productString = `
+  <article class="art-4">
+            <figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure>
+            <h2>Sinus Hoodie</h2>
+            <h3>Forrest</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p>
+            <button>buy</button>
+        </article>
+`
+
+ main.insertAdjacentHTML("beforeend", productString);
