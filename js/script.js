@@ -8,7 +8,6 @@ const home = document.querySelector("a");
 const home2 = document.querySelector(
   "body > footer:nth-child(3) > section:nth-child(1) > article:nth-child(1) > a:nth-child(2)"
 );
-console.log(home2)
 home.innerText='Start'
 home2.innerText = "Start";
 
@@ -62,5 +61,23 @@ const productString = `
             <button>buy</button>
         </article>
 `
-
  main.insertAdjacentHTML("beforeend", productString);
+
+ const logo2 = document.querySelector(
+   "body > header:nth-child(1) > img:nth-child(1)"
+ );
+logo2.addEventListener("click", (e) => {
+ console.log("found you!");
+});
+
+const allProducts = document.querySelectorAll('main > article')
+
+allProducts.forEach((product) => (
+    product.addEventListener("click", (e) => {
+ const name = product.querySelector('h3')
+ console.log(`Hi I'm article ${name.innerText}`)
+})
+));
+
+
+
